@@ -71,13 +71,13 @@ body {
   margin-bottom: 20px;
 }
 
-/* Skills in Row */
+/* Skills Section */
 .skills-row {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
-  gap: 30px;
   overflow-x: auto;
+  gap: 30px;
   padding: 10px;
 }
 
@@ -91,13 +91,12 @@ body {
   flex-shrink: 0;
 }
 
-.skill-card img,
-.text-icon {
-  width: 48px;
-  height: 48px;
+.skill-card img {
+  max-width: 48px;
+  height: auto;
 }
 
-/* "A" icon style */
+/* "A" Typography icon */
 .text-icon {
   background-color: #002147;
   color: white;
@@ -107,6 +106,8 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  width: 48px;
+  height: 48px;
 }
 
 /* Portfolio */
@@ -218,5 +219,13 @@ body {
   .skills-row {
     flex-wrap: nowrap;
     overflow-x: auto;
+  }
+
+  .skill-card {
+    min-width: 90px;
+  }
+
+  .skill-card img {
+    max-width: 40px;
   }
 }
