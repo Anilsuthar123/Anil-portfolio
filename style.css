@@ -71,21 +71,19 @@ body {
 /* Skills Section */
 .skills-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-wrap: nowrap;
   gap: 30px;
-  overflow-x: auto;
-  padding: 10px;
+  margin-top: 20px;
 }
 
 .skill-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 100px;
   gap: 8px;
   font-weight: bold;
-  flex-shrink: 0;
+  width: 100px;
 }
 
 .skill-card img,
@@ -106,7 +104,7 @@ body {
   border-radius: 50%;
 }
 
-/* Gallery */
+/* Portfolio */
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -213,11 +211,6 @@ body {
   }
 
   .skills-row {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-
-  .skill-card {
-    min-width: 80px;
+    flex-wrap: wrap;
   }
 }
