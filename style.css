@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #eef5ff;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #002147;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  white-space: nowrap;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background: white;
+  padding: 14px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Section */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Skills in Row */
+.skills-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  gap: 8px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.skill-card img,
+.text-icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* "A" icon style */
+.text-icon {
+  background-color: #002147;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Portfolio */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Contact */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.whatsapp { background: #25D366; }
+.email { background: #007bff; }
+.instagram { background: #C13584; }
+
+.contact-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    gap: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skills-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
