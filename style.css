@@ -11,7 +11,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Hero Section */
 .hero {
   background-color: #002147;
   color: white;
@@ -38,7 +37,6 @@ body {
   font-size: 1.2rem;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: center;
@@ -58,7 +56,6 @@ body {
   color: #007bff;
 }
 
-/* Section */
 .section {
   padding: 60px 20px;
   max-width: 1000px;
@@ -76,8 +73,8 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
-  overflow-x: auto;
   gap: 30px;
+  overflow-x: auto;
   padding: 10px;
 }
 
@@ -91,12 +88,13 @@ body {
   flex-shrink: 0;
 }
 
-.skill-card img {
-  max-width: 48px;
-  height: auto;
+.skill-card img,
+.text-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
-/* "A" Typography icon */
 .text-icon {
   background-color: #002147;
   color: white;
@@ -106,11 +104,9 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
 }
 
-/* Portfolio */
+/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -222,10 +218,6 @@ body {
   }
 
   .skill-card {
-    min-width: 90px;
-  }
-
-  .skill-card img {
-    max-width: 40px;
+    min-width: 80px;
   }
 }
